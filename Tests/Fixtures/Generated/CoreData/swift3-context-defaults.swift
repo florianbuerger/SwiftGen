@@ -148,8 +148,8 @@ internal class MainEntity: NSManagedObject {
   @NSManaged internal var transient: String?
   @NSManaged internal var uri: URL?
   @NSManaged internal var uuid: UUID?
-  @NSManaged internal var manyToMany: Set<SecondaryEntity>
-  @NSManaged internal var oneToMany: NSOrderedSet
+  @NSManaged internal var manyToMany: Set<SecondaryEntity>?
+  @NSManaged internal var oneToMany: NSOrderedSet?
   @NSManaged internal var oneToOne: SecondaryEntity?
   @NSManaged internal var fetchedProperty: [NewEntity]
   // swiftlint:enable implicitly_unwrapped_optional discouraged_optional_boolean
@@ -309,7 +309,7 @@ internal class SecondaryEntity: NSManagedObject {
 
   // swiftlint:disable implicitly_unwrapped_optional discouraged_optional_boolean
   @NSManaged internal var name: String
-  @NSManaged internal var manyToMany: Set<MainEntity>
+  @NSManaged internal var manyToMany: Set<MainEntity>?
   @NSManaged internal var oneToMany: MainEntity?
   @NSManaged internal var oneToOne: MainEntity?
   // swiftlint:enable implicitly_unwrapped_optional discouraged_optional_boolean
