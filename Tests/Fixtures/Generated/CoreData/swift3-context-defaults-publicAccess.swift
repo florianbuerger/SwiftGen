@@ -143,7 +143,7 @@ public class MainEntity: NSManagedObject {
     }
   }
   @NSManaged public var optionalString: String?
-  @NSManaged public var string: String!
+  @NSManaged public var string: String
   @NSManaged public var transformable: AnyObject?
   @NSManaged public var transient: String?
   @NSManaged public var uri: URL?
@@ -308,7 +308,7 @@ public class SecondaryEntity: NSManagedObject {
   }
 
   // swiftlint:disable implicitly_unwrapped_optional discouraged_optional_boolean
-  @NSManaged public var name: String!
+  @NSManaged public var name: String
   @NSManaged public var manyToMany: Set<MainEntity>
   @NSManaged public var oneToMany: MainEntity?
   @NSManaged public var oneToOne: MainEntity?
